@@ -12,4 +12,5 @@ function saveVideoTime({ seconds }) {
   localStorageService.save(TIME_KEY, seconds);
 }
 
-player.setCurrentTime(localStorage.load(TIME_KEY) || 0);
+player.setCurrentTime(localStorage.getItem(TIME_KEY) || 0);
+
